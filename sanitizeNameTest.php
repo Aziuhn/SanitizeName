@@ -8,16 +8,16 @@ $dataset = [
     ['De giovanni','De Giovanni', __LINE__],
     ['de giovanni','De Giovanni', __LINE__],
     ['de Giovanni','De Giovanni', __LINE__],
+    ['    de    Giovanni    ','De Giovanni', __LINE__],
+    ['de     Giovanni ','De Giovanni', __LINE__],
     ['de Giovanni ','De Giovanni', __LINE__],
-    ['de Giovanni ','De Giovanni', __LINE__],
-    ['de Giovanni ','De Giovanni', __LINE__],
-    ['de 55 Giovanni','De Giovanni', __LINE__],
+    ['de    55     Giovanni','De Giovanni', __LINE__],
     ['Mario83','Mario', __LINE__],
     ['Mario@','Mario', __LINE__],
     ['Mario@ ','Mario', __LINE__],
-    ['John Romita Sr.','John Romita Sr.', __LINE__],
-    ['John Romita Jr.','John Romita Jr.', __LINE__],
-    ['John Romita Jr.','John Romita Jr.', __LINE__],
+    ['John        Romita     Sr.    ','John Romita Sr.', __LINE__],
+    ['          John     Romita    Jr.    ','John Romita Jr.', __LINE__],
+    ['John Romita Jr.   ','John Romita Jr.', __LINE__],
     ['<h1>John123456789</h1>','John', __LINE__],
     ['<script>alert("ciccio")</script>','', __LINE__],
     [' <h1> John123456789 </h1> ','John', __LINE__]
@@ -35,6 +35,6 @@ foreach ($dataset as $row) {
         if($result == $expected){
             //echo "PASS\n";
         }else{
-            echo "FAIL on line $line\n";
+            echo "FAIL on line $line\n$result is not $expected\n";
         }
 }
