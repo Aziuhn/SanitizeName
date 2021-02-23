@@ -1,7 +1,6 @@
 <?php
 function sanitizeName($name){
-    
-    if(strpos($name,"<script>")!=null){
+    if(strpos($name,"<script>")!==false){
         $name='';
     }
     $explodedNames = explode(" ", $name);
